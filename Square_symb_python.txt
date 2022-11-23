@@ -1,0 +1,22 @@
+def square(symb, width):
+  height = width
+  for x in range(width):
+    print(symb, end="   ")
+  print("\n")
+  # try to make lines on the side
+  for x in range(height - 2):
+    for j in range(width):
+      if j == 0 or j == width - 1:
+        print(symb, end="   ")
+      else:
+        print("  ", end="  ")
+    print("\n")
+  for x in range(width):
+    print(symb, end="   ")
+
+
+#main
+symb = input()
+height = int(input())
+print("")
+square(symb, height)
